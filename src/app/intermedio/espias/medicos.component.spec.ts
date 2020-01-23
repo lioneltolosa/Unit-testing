@@ -1,17 +1,9 @@
 import { MedicosComponent } from './medicos.component';
 import { MedicosService } from './medicos.service';
-/* import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/from';
-import 'rxjs/add/observable/empty';
-import 'rxjs/add/observable/throw'; */
 
 import { empty } from 'rxjs';
 import { from } from 'rxjs';
 import { throwError } from 'rxjs';
-
-
-
-
 
 describe('MedicosComponent', () => {
     let componente: MedicosComponent;
@@ -20,8 +12,7 @@ describe('MedicosComponent', () => {
     beforeEach(() => {
         componente = new MedicosComponent(servicio);
     });
-
-
+    
     it('Init: Debe de cargar los médicos', () => {
         const medicos = ['medico1', 'medico2', 'medico3'];
 
@@ -55,7 +46,7 @@ describe('MedicosComponent', () => {
     });
 
     it('Si falla la adicion, la propiedad mensajeError, debe ser igual al error del servicio', () => {
-        const miError = 'Nose pudo agregar el médico';
+        const miError = 'No se pudo agregar el médico';
 
         spyOn(servicio, 'agregarMedico').and
             .returnValue(throwError(miError));

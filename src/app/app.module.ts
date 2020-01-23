@@ -10,6 +10,7 @@ import { ClassComponent } from './components/class/class.component';
 import { Jugador2Component } from './intermedio/eventEmitter/jugador2/jugador2.component';
 import { FormsComponent } from './intermedio/forms/forms.component';
 import { MedicosComponent } from './intermedio/espias/medicos/medicos.component';
+import { HospitalComponent } from './intermedio2/hospital/hospital.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MedicosComponent } from './intermedio/espias/medicos/medicos.component'
     ClassComponent,
     Jugador2Component,
     FormsComponent,
-    MedicosComponent
+    MedicosComponent,
+    HospitalComponent
   ],
   imports: [
     BrowserModule,
